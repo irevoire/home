@@ -1,0 +1,41 @@
+set-option global scrolloff 99,0 # keep the cursor in the center of the screen
+set-option global ui_options ncurses_enable_mouse=false
+
+# define hook to avoid going to the next line when going on the right at the end of a line
+hook global NormalKey h %{
+    try %{
+                execute-keys <a-k>$<ret> l
+    }
+}
+
+hook global NormalKey l %{
+    try %{
+                execute-keys <a-k>^<ret>h
+    }
+}
+
+define-command delete-whichwrap %{ evaluate-commands -draft -itersel %sh{
+        if [ "${kak_selection}" = "
+" ]; then
+        echo "exec i<backspace><esc>"
+            else
+                    echo "exec d"
+                        fi
+} }
+map global normal d ': delete-whichwrap<ret>'
+
+# bepo mappings
+source ~/.config/kak/bepo.kak
+colorscheme molokai
+
+define-command x write-quit
+
+# use rustfmt to format rust file
+hook global WinSetOption filetype=rust %{
+    set window formatcmd 'rustfmt'
+}
+
+# autoformat rust file before save
+hook global BufWritePre .*\.rs %{
+    format
+}

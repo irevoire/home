@@ -1,0 +1,4 @@
+--theme="Monokai Extended"
+--style="plain"
+--paging="never"
+--map-syntax .ignore:.gitignore
