@@ -1,5 +1,5 @@
-nnoremap <leader>c :make c <CR>
-nnoremap <leader>ct :make check --tests <CR>
-nnoremap <leader>t :make test <CR>
-nnoremap <leader>r :make run <CR>
-nnoremap <leader>rr :make  run --release <CR>
+nnoremap <leader>mc :make c <CR>
+nnoremap <leader>mct :make check --tests <CR>
+nnoremap <leader>mt :make test <CR>
+nnoremap <leader>mr :make run <CR>
+nnoremap <leader>mrr :make  run --release <CR>
