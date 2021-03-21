@@ -5,7 +5,7 @@ autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
 ]], false)
 
 vim.o.completeopt="menuone,noinsert,noselect"
-vim.o.updatetime=3000
+vim.o.updatetime=500
 
 -- nvim_lsp object
 local nvim_lsp = require'lspconfig'
@@ -21,8 +21,11 @@ nvim_lsp.rust_analyzer.setup({ on_attach=on_attach })
 -- Enable diagnostics
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
-    virtual_text = true,
-    signs = true,
+    underline = false,
+    virtual_text = false,
+    signs = {
+      severity_limit = 'Warning',
+    },
     update_in_insert = true,
   }
 )
