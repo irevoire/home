@@ -1,17 +1,12 @@
--- theme
--- vim.cmd('colorscheme base16-gruvbox-dark-hard')
-
 vim.o.termguicolors = true
-vim.o.clipboard = 'unnamedplus'
-vim.wo.number = true
 vim.o.swapfile = false
 vim.wo.cursorline = true
 
 -- search features
-vim.o.inccommand = 'nosplit'
-vim.o.incsearch = true
-vim.o.ignorecase = true
-vim.o.smartcase = true
+vim.o.inccommand = 'nosplit'	-- Show replacement as you type
+vim.o.incsearch = true		-- Find as you type search
+vim.o.ignorecase = true		-- Case insensitive search
+vim.o.smartcase = true		-- Case sensitive when uc present
 vim.o.gdefault = true
 vim.o.hidden = true
 

@@ -9,5 +9,3 @@ require('plugins')
 require('settings')
 
 require('lsp')
-
-vim.api.nvim_command("set nonumber")

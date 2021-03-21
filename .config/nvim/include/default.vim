@@ -5,9 +5,6 @@ set background=dark            " Assume a dark background
 set mouse=r                    " Automatically disable mouse usage
 set mousehide                  " Hide the mouse cursor while typing
 set showmatch                  " Show matching brackets/parenthesis
-set incsearch                  " Find as you type search
-set ignorecase                 " Case insensitive search
-set smartcase                  " Case sensitive when uc present
 set wildmenu                   " Show list instead of just completing
 set wildmode=list:longest,full " Command <Tab> completion, list matches, then longest common part, then all.
 set scrolloff=999              " Minimum lines to keep above and below cursor
