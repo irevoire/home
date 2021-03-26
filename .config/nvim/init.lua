@@ -4,8 +4,8 @@ vim.api.nvim_command("runtime! include/style.vim")
 vim.api.nvim_command("runtime! include/default.vim")
 
 
-require('mappings')
 require('plugins')
+require('mappings')
 require('settings')
 
 require('lsp')

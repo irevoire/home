@@ -240,9 +240,7 @@ exec --no-startup-id flameshot
 exec --no-startup-id numlockx
 exec --no-startup-id dunst
 exec --no-startup-id picom
-exec --no-startup-id discord
 exec --no-startup-id firefox
-exec --no-startup-id xrandr -s 5120x1440
 
 # this will keep the PiP window of chromium and firefox on top of all desktop
 for_window [title="Picture-in-Picture"] sticky enable, border none
