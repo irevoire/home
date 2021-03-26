@@ -1,6 +1,14 @@
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
 	use {'wbthomason/packer.nvim', opt = true}
+	use {
+		'glepnir/galaxyline.nvim',
+		branch = 'main',
+		-- your statusline
+		config = function() require'galaxyline-settings' end,
+		-- some optional icons
+		requires = {'kyazdani42/nvim-web-devicons', opt = true}
+	}
 	use 'airblade/vim-gitgutter'
 	use 'tpope/vim-fugitive'
 	use 'neovim/nvim-lspconfig'
@@ -12,7 +20,6 @@ return require('packer').startup(function()
 	use 'sheerun/vim-polyglot'
 	use 'cespare/vim-toml'
 	use 'terryma/vim-multiple-cursors'
-	use 'vim-airline/vim-airline'
 	use 'junegunn/fzf.vim'
 	use 'vim-scripts/restore_view.vim'
 	use {
