@@ -22,18 +22,10 @@ block = "sound"
 on_click = "pactl set-sink-mute 0 toggle"
 
 [[block]]
-block = "backlight"
-
-[[block]]
 block = "hueshift"
 hue_shifter = "redshift"
 step = 50
 click_temp = 3500
-
-[[block]]
-block = "battery"
-interval = 10
-format = "{percentage}% {time}"
 
 [[block]]
 block = "time"
