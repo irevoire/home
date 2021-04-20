@@ -1,4 +1,4 @@
-source .zshrc_grml
+[ -f ~/.zshrc_grml ] && source ~/.zshrc_grml
 
 autoload -U colors && colors
 
