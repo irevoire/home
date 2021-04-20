@@ -17,6 +17,7 @@ return require('packer').startup(function()
 	use 'tpope/vim-surround'
 	use 'voldikss/vim-floaterm'
 	use 'preservim/nerdcommenter'
+	use 'christoomey/vim-system-copy'
 	use 'sheerun/vim-polyglot'
 	use 'cespare/vim-toml'
 	use 'terryma/vim-multiple-cursors'
