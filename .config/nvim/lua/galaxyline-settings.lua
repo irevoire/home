@@ -17,7 +17,7 @@ gl.short_line_list = {
 -- VistaPlugin = extension.vista_nearest
 
 local colors = {
-    bg = '#282c34',
+--     bg = '#282c34',
     line_bg = '#353644',
     fg = '#8FBCBB',
     fg_green = '#65a380',
@@ -160,7 +160,7 @@ gls.left[3] ={
 }
 gls.left[4] = {
   FileName = {
-    provider = {'FileName','FileSize'},
+    provider = {'FileIcon', 'FileName'},
     condition = buffer_not_empty,
     highlight = {colors.fg,colors.line_bg,'bold'}
   }

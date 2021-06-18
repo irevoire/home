@@ -15,6 +15,9 @@ vim.api.nvim_set_keymap('n', 'K', "<cmd>lua vim.lsp.buf.hover()<CR>", { noremap 
 vim.api.nvim_set_keymap('n', 'g0', "<cmd>lua vim.lsp.buf.document_symbol()<CR>", { noremap = true, silent = true })
 --]]
 
+-- Auto completion
+-- vim.api.nvim_set_keymap('i', '<C-n>', "pumvisible", { noremap = true, silent = true })
 
 -- Quickfix mappings
 vim.api.nvim_set_keymap('n', '<leader>n', ":cnext<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>N', ":cprevious<CR>", { noremap = true, silent = true })

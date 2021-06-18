@@ -102,7 +102,7 @@ zstyle ':prompt:grml:right:setup' items vcs sad-smiley
 unsetopt nomatch
 
 export PATH="${PATH}:${HOME}/.local/bin/"
-source $HOME/.cargo/env
+[ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
 
 export FZF_DEFAULT_COMMAND='rg --files'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -110,4 +110,4 @@ export FZF_DEFAULT_COMMAND='rg --files'
 ulimit -n 10240
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
+export MILLI_BENCH_DATASETS_PATH=~/datasets

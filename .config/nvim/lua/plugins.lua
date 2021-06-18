@@ -14,6 +14,7 @@ return require('packer').startup(function()
 	use 'neovim/nvim-lspconfig'
 	use 'nvim-lua/lsp_extensions.nvim'
 	use 'nvim-lua/completion-nvim'
+	use { 'aca/completion-tabnine', run = './install.sh' }
 	use 'tpope/vim-surround'
 	use 'voldikss/vim-floaterm'
 	use 'preservim/nerdcommenter'

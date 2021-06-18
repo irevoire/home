@@ -19,6 +19,17 @@ set pastetoggle=<F3>           " Enter in paste mode
 set cinoptions=t0              " fix the identation of C file
 set guicursor=                 " better cursor
 
+set completeopt=menuone,noinsert,noselect
+" let g:completion_enable_auto_popup = 0
+let g:completion_enable_snippet = 'UltiSnips'
+let g:completion_chain_complete_list = {
+    \ 'default': [
+    \    {'complete_items': ['lsp', 'snippet', 'tabnine', 'path' ]},
+    \    {'mode': '<c-p>'},
+    \    {'mode': '<c-n>'}
+    \]
+\}
+
 let mapleader = ','
 
 au BufRead,BufNewFile *.rs      set filetype=rust
