@@ -1,1 +1,1 @@
-export BROWER=firefox
+export BROWSER=firefox
