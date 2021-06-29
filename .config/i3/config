@@ -151,6 +151,10 @@ bindsym $mod+Shift+minus move container to workspace $ws8
 bindsym $mod+Shift+slash move container to workspace $ws9
 bindsym $mod+Shift+asterisk move container to workspace $ws10
 
+# move focused container to and from scratchpad
+bindsym $mod+Shift+Tab move scratchpad
+bindsym $mod+Tab scratchpad show
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
