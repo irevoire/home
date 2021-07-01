@@ -1,0 +1,15 @@
+#!/bin/sh
+
+refs=$(cat)
+forbidden_branches=(master main release stable)
+
+for branch in ${forbidden_branches[@]}; do
+	if [[ $(echo $refs | grep $branch) ]]; then
+		echo "You tried to push to a \"$branch\" branch, which is a forbidden"
+		echo 'If you still want to push to this branch you can add "--no-verify" to the end of your command, or simply execute:'
+		echo '!! --no-verify'
+		exit 1
+	fi
+done
+
+exit 0

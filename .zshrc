@@ -109,5 +109,14 @@ export FZF_DEFAULT_COMMAND='rg --files'
 
 ulimit -n 10240
 
+alias carog="cargo"
+alias acrog="cargo"
+alias acrgo="cargo"
+
+export PATH="$PATH:$(yarn global bin)"
+export PATH="$PATH:$(gem environment gempath)"
+export PATH="$PATH:/home/irevoire/.local/share/gem/ruby/3.0.0/bin"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 export MILLI_BENCH_DATASETS_PATH=~/datasets
+
+export TERM=xterm-256color
