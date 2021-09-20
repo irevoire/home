@@ -17,8 +17,8 @@ b = "move_prev_word_start"
 "é" = "move_next_word_start"
 
 # Find
-l = "find_till_char"
-L = "till_prev_char"
+j = "find_till_char"
+J = "till_prev_char"
 h = "replace" # Maps the 'a' key to the move_char_left command
 H = "replace_with_yanked" # Maps the 'a' key to the move_char_left command
 
@@ -28,14 +28,17 @@ g = { a = "code_action" } # Maps `ga` to show possible code actions
 "«" = "unindent"
 "»" = "indent"
 
+l = "search_next"
+L = "extend_search_next"
+
 [keys.select]
 t = "extend_char_left"
 n = "extend_char_right"
 r = "extend_line_up"
 s = "extend_line_down"
 
-l = "extend_till_char"
-L = "extend_till_prev_char"
+j = "extend_till_char"
+J = "extend_till_prev_char"
 f = "extend_next_char"
 F = "extend_prev_char"
 "é" = "extend_next_word_start"
