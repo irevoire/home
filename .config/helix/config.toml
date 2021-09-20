@@ -1,0 +1,51 @@
+theme = "monokai"
+
+[editor]
+scrolloff = 999
+line-number = "none"
+
+# At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
+[keys.normal]
+# Movements:
+# Single move:
+t = "move_char_left" # Maps the 'a' key to the move_char_left command
+s = "move_line_down" # Maps the 'w' key move_line_up
+r = "move_line_up" # Maps the 'w' key move_line_up
+n = "move_char_right" # Maps the 'a' key to the move_char_left command
+# Word move:
+b = "move_prev_word_start"
+"é" = "move_next_word_start"
+
+# Find
+l = "find_till_char"
+L = "till_prev_char"
+h = "replace" # Maps the 'a' key to the move_char_left command
+H = "replace_with_yanked" # Maps the 'a' key to the move_char_left command
+
+"C-S-esc" = "extend_line" # Maps Control-Shift-Escape to extend_line
+g = { a = "code_action" } # Maps `ga` to show possible code actions
+
+"«" = "unindent"
+"»" = "indent"
+
+[keys.select]
+t = "extend_char_left"
+n = "extend_char_right"
+r = "extend_line_up"
+s = "extend_line_down"
+
+l = "extend_till_char"
+L = "extend_till_prev_char"
+f = "extend_next_char"
+F = "extend_prev_char"
+"é" = "extend_next_word_start"
+"É" = "extend_next_long_word_start"
+
+[keys.insert]
+"A-x" = "normal_mode" # Maps Alt-X to enter normal mode
+
+# [keys.view]
+# t = "align_view_top"
+# s = "scroll_down"
+# r = "scroll_up"
+
