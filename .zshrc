@@ -107,6 +107,9 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 export FZF_DEFAULT_COMMAND='rg --files'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+[ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
+[ -f "${HOME}/.iterm2_shell_integration.zsh" ] && source "${HOME}/.iterm2_shell_integration.zsh"
+
 ulimit -n 10240
 
 alias carog="cargo"
@@ -116,7 +119,9 @@ alias acrgo="cargo"
 export PATH="$PATH:$(yarn global bin)"
 export PATH="$PATH:$(gem environment gempath)"
 export PATH="$PATH:/home/irevoire/.local/share/gem/ruby/3.0.0/bin"
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 export MILLI_BENCH_DATASETS_PATH=~/datasets
 
 export TERM=xterm-256color
+export EDITOR=hx
+
+export RUST_BACKTRACE=1
