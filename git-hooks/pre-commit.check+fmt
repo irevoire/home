@@ -13,6 +13,9 @@ at the end of your previous command.
 
 If you are running a variant of bash you can directly paste this command in your terminal:
 !! --no-verify
+
+If you want to see your error run:
+cargo check --workspace --all-targets
 EOF
     exit 1
 fi
