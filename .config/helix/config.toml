@@ -3,7 +3,8 @@ theme = "monokai"
 [editor]
 scrolloff = 999
 auto-pairs = false
-line-number = "none"
+# line-number = "none"
+true-color = true
 
 # At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
 [keys.normal]
@@ -15,7 +16,9 @@ r = "move_line_up" # Maps the 'w' key move_line_up
 n = "move_char_right" # Maps the 'a' key to the move_char_left command
 # Word move:
 b = "move_prev_word_start"
+"B" = "move_prev_long_word_start"
 "é" = "move_next_word_start"
+"É" = "move_next_long_word_start"
 
 # Find
 j = "find_till_char"
