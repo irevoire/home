@@ -58,3 +58,6 @@ F = "extend_prev_char"
 # t = "align_view_top"
 # s = "scroll_down"
 # r = "scroll_up"
+
+[lsp]
+display-messages = true
