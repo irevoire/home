@@ -103,18 +103,21 @@ unsetopt nomatch
 
 export PATH="${PATH}:${HOME}/.local/bin/"
 [ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
-
 export FZF_DEFAULT_COMMAND='rg --files'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 [ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
 [ -f "${HOME}/.iterm2_shell_integration.zsh" ] && source "${HOME}/.iterm2_shell_integration.zsh"
+
 
 ulimit -n 10240
 
 alias carog="cargo"
 alias acrog="cargo"
 alias acrgo="cargo"
+
+alias icat="kitty icat --align=left" 
+alias isvg="rsvg-convert | icat" 
+alias idot="dot -T png -Gbgcolor="none" -Ncolor="lightgray" -Nfontcolor="lightgray" -Ecolor="lightgray" | icat" 
 
 export PATH="$PATH:$(yarn global bin)"
 export PATH="$PATH:$(gem environment gempath)"
