@@ -115,7 +115,27 @@ alias carog="cargo"
 alias acrog="cargo"
 alias acrgo="cargo"
 
-alias icat="kitty icat --align=left" 
+function icat () {
+	if [ "$TERM_PROGRAM" == "iTerm.app" ]
+	then
+		imgcat "$@"
+	elif [ "$TERM_PROGRAM" == "Kitty" ]
+	then
+		kitty icat --align=left "$@"
+	elif command -v viu &> /dev/null
+	then
+		if [ -z "$@" ] # if there is no arguments
+		then
+			viu --transparent - # read from stdin
+		else
+			viu --transparent "$@"
+		fi
+	else
+		echo "No image viewer were found. Install viu"
+	fi
+	
+}
+
 alias isvg="rsvg-convert | icat" 
 alias idot="dot -T png -Gbgcolor="none" -Ncolor="lightgray" -Nfontcolor="lightgray" -Ecolor="lightgray" | icat" 
 
