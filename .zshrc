@@ -119,7 +119,7 @@ function icat () {
 	if [ "$TERM_PROGRAM" == "iTerm.app" ]
 	then
 		imgcat "$@"
-	elif [ "$TERM_PROGRAM" == "Kitty" ]
+	elif [ "$TERMINFO" =~ .*"kitty".* ]
 	then
 		kitty icat --align=left "$@"
 	elif command -v viu &> /dev/null
