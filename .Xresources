@@ -67,9 +67,3 @@ URxvt*background:                     black
 URxvt*saveLines:                      5000
 URxvt*internalBorder:		      8
 URxvt*letterSpace:		      1
-
-rofi.color-enabled: true
-rofi.color-window: #393939, #393939, #268bd2
-rofi.color-normal: #393939, #ffffff, #393939, #268bd2, #ffffff
-rofi.color-active: #393939, #268bd2, #393939, #268bd2, #205171
-rofi.color-urgent: #393939, #f3843d, #393939, #268bd2, #ffc39c

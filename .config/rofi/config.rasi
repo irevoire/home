@@ -1,0 +1,7 @@
+configuration {
+    modes: [run, ssh, window, filebrowser];
+    font: "Cascadia Code 16";
+    show-icons: true;
+    terminal: "kitty";
+}
+@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
