@@ -99,6 +99,9 @@ zstyle ':prompt:grml:left:setup' items rc change-root user at \
                                        host path emoji percent
 zstyle ':prompt:grml:right:setup' items vcs sad-smiley
 
+fpath+=~/.zfunc
+compinit
+
 unsetopt nomatch
 
 export PATH="${PATH}:${HOME}/.local/bin/"
@@ -148,3 +151,5 @@ export TERM=xterm-256color
 export EDITOR=hx
 
 export RUST_BACKTRACE=1
+
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
