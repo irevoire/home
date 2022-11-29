@@ -12,6 +12,8 @@
 (import alias: (identifier) @namespace)
 (remote_type_identifier
   module: (identifier) @namespace)
+(remote_constructor_name
+  module: (identifier) @namespace)
 ((field_access
   record: (identifier) @namespace
   field: (label) @function)
@@ -45,6 +47,9 @@
 (remote_type_identifier) @type
 (type_identifier) @type
 
+; Data constructors
+(constructor_name) @constructor
+
 ; Literals
 (string) @string
 (bit_string_segment_option) @function.builtin
@@ -75,6 +80,7 @@
   "todo"
   "try"
   "type"
+  "use"
 ] @keyword
 
 ; Punctuation
@@ -98,4 +104,5 @@
   "->"
   ".."
   "-"
+  "<-"
 ] @punctuation.delimiter
