@@ -1,0 +1,5 @@
+[pull]
+	rebase = false
+[user]
+	email = tamo@meilisearch.com
+	name = Tamo
