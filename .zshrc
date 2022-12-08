@@ -151,5 +151,6 @@ export TERM=xterm-256color
 export EDITOR=hx
 
 export RUST_BACKTRACE=1
+export RUSTFLAGS="-Z macro-backtrace"
 
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
