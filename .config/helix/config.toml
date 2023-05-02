@@ -4,7 +4,7 @@ theme = "monokai"
 scrolloff = 999
 auto-pairs = false
 # line-number = "none"
-gutters = ["diagnostics"]
+# gutters = ["diagnostics"]
 true-color = true
 
 # At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
