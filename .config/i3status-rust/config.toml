@@ -70,3 +70,12 @@ short = " $icon $timestamp.datetime(f:%R) "
 
 [[block]]
 block = "notify"
+
+[[block]]
+block = "menu"
+text = "\uf011"
+[[block.items]]
+display = " -&gt; Power Off &lt;-"
+cmd = "poweroff"
+confirm_msg = "Are you sure you want to power off?"
+
