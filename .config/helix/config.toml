@@ -3,7 +3,9 @@ theme = "monokai"
 [editor]
 scrolloff = 999
 auto-pairs = false
-# line-number = "none"
+mouse = false
+cursorline = true
+# line-number = none
 # gutters = ["diagnostics"]
 true-color = true
 
