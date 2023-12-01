@@ -1,0 +1,4 @@
+inherits = "monokai"
+
+[palette]
+background = "#000000"

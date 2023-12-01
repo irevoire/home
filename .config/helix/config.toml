@@ -1,4 +1,4 @@
-theme = "monokai"
+theme = "monokai_without_background"
 
 [editor]
 scrolloff = 999
