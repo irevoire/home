@@ -41,6 +41,8 @@ L = "extend_search_next"
 S = "select_regex"
 "A-S" = "split_selection"
 
+"À" = ":toggle lsp.display-inlay-hints"
+
 [keys.select]
 t = "extend_char_left"
 n = "extend_char_right"
