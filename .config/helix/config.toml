@@ -8,6 +8,7 @@ cursorline = true
 # line-number = none
 # gutters = ["diagnostics"]
 true-color = true
+popup-border = "all"
 
 # At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
 [keys.normal]
