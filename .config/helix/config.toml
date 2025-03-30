@@ -5,9 +5,7 @@ scrolloff = 999
 auto-pairs = false
 mouse = false
 cursorline = true
-# line-number = none
-# gutters = ["diagnostics"]
-gutters = ["diagnostics",  "line-numbers", "diff"]
+gutters = ["diagnostics",  "diff"]
 true-color = true
 popup-border = "all"
 
@@ -32,18 +30,21 @@ h = "replace" # Maps the 'a' key to the move_char_left command
 H = "replace_with_yanked" # Maps the 'a' key to the move_char_left command
 
 "C-S-esc" = "extend_line" # Maps Control-Shift-Escape to extend_line
-g = { a = "code_action" } # Maps `ga` to show possible code actions
 
 "«" = "unindent"
 "»" = "indent"
 
 l = "search_next"
-L = "extend_search_next"
+A-l = "extend_search_next"
+L = "search_prev"
+A-L = "extend_search_prev"
 
 S = "select_regex"
 "A-S" = "split_selection"
 
 "À" = ":toggle lsp.display-inlay-hints"
+"Y" = ":set gutters [\"diagnostics\",\"line-numbers\",\"diff\"]"
+"X" = ":set gutters [\"diagnostics\",\"diff\"]"
 
 [keys.select]
 t = "extend_char_left"
