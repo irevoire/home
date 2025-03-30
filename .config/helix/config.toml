@@ -7,6 +7,7 @@ mouse = false
 cursorline = true
 # line-number = none
 # gutters = ["diagnostics"]
+gutters = ["diagnostics",  "line-numbers", "diff"]
 true-color = true
 popup-border = "all"
 
@@ -64,3 +65,7 @@ F = "extend_prev_char"
 # t = "align_view_top"
 # s = "scroll_down"
 # r = "scroll_up"
+
+[editor.indent-guides]
+render = true
+character = "│"

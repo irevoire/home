@@ -1,6 +1,25 @@
 [[language]]
 name = "rust"
 
-
 [language-server.rust-analyzer]
 environment = { CARGO_TARGET_DIR = "target/analyzer" }
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[language-server]
+numbat-lsp = { command = "/Users/irevoire/numbat/target/debug/numbat-lsp" }
+
+[[language]]
+name = "numbat"
+scope = "source.nbt"
+roots = ["."]
+file-types = ["nbt"]
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+language-servers = [ "numbat-lsp" ]
+# formatter = { command = "mylang-formatter" , args = ["--stdin"] }
+
+[[grammar]]
+name = "numbat"
+source.path = "/Users/irevoire/tree-sitter-numbat"

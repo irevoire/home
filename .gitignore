@@ -1,2 +1,7 @@
 .vim/view
 .vim/plugged
+.DS_Store
+target
+Cargo.lock
+*.pending-snap
+*.snap.new
