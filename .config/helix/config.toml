@@ -11,12 +11,16 @@ popup-border = "all"
 
 # At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
 [keys.normal]
+"'" = "insert_mode"
+"\\" = "undo"
+"|" = "redo"
+
 # Movements:
 # Single move:
-t = "move_char_left" # Maps the 'a' key to the move_char_left command
-s = "move_line_down" # Maps the 'w' key move_line_up
-r = "move_line_up" # Maps the 'w' key move_line_up
-n = "move_char_right" # Maps the 'a' key to the move_char_left command
+r = "move_char_left" # Maps the 'a' key to the move_char_left command
+t = "move_line_down" # Maps the 'w' key move_line_up
+i = "move_line_up" # Maps the 'w' key move_line_up
+u = "move_char_right" # Maps the 'a' key to the move_char_left command
 # Word move:
 b = "move_prev_word_start"
 "B" = "move_prev_long_word_start"
@@ -24,20 +28,15 @@ b = "move_prev_word_start"
 "É" = "move_next_long_word_start"
 
 # Find
-j = "find_till_char"
-J = "till_prev_char"
-h = "replace" # Maps the 'a' key to the move_char_left command
-H = "replace_with_yanked" # Maps the 'a' key to the move_char_left command
+# j = "find_till_char"
+# J = "till_prev_char"
+# h = "replace" # Maps the 'a' key to the move_char_left command
+# H = "replace_with_yanked" # Maps the 'a' key to the move_char_left command
 
-"C-S-esc" = "extend_line" # Maps Control-Shift-Escape to extend_line
-
-"«" = "unindent"
-"»" = "indent"
-
-l = "search_next"
-A-l = "extend_search_next"
-L = "search_prev"
-A-L = "extend_search_prev"
+# l = "search_next"
+# A-l = "extend_search_next"
+# L = "search_prev"
+# A-L = "extend_search_prev"
 
 S = "select_regex"
 "A-S" = "split_selection"
@@ -47,17 +46,15 @@ S = "select_regex"
 "X" = ":set gutters [\"diagnostics\",\"diff\"]"
 
 [keys.select]
-t = "extend_char_left"
-n = "extend_char_right"
-r = "extend_line_up"
-s = "extend_line_down"
+r = "extend_char_left"
+t = "extend_line_down"
+i = "extend_line_up"
+u = "extend_char_right"
 
 j = "extend_till_char"
 J = "extend_till_prev_char"
 f = "extend_next_char"
 F = "extend_prev_char"
-"é" = "extend_next_word_start"
-"É" = "extend_next_long_word_start"
 
 [keys.insert]
 "A-x" = "normal_mode" # Maps Alt-X to enter normal mode
