@@ -43,11 +43,11 @@ hex() {
 }
 
 # remove the (git) thing and add an indication of the status
-zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' unstagedstr "%F{red}"
-zstyle ':vcs_info:*' stagedstr "%F{yellow}" # what is this
-zstyle ':vcs_info:git*' formats "%F{magenta}[%F{green}%m%u%c%b%F{magenta}]%f"
+# zstyle ':vcs_info:*' enable git
+# zstyle ':vcs_info:*' check-for-changes true
+# zstyle ':vcs_info:*' unstagedstr "%F{red}"
+# zstyle ':vcs_info:*' stagedstr "%F{yellow}" # what is this
+# zstyle ':vcs_info:git*' formats "%F{magenta}[%F{green}%m%u%c%b%F{magenta}]%f"
 
 function emoji_prompt () {
 	CUTE_EMOJI=( "🎃" "🎄" "😁" "😊" "😎" "😚" "😏" "😇" "🤠" "🥳" "🤓" "💩"
@@ -93,16 +93,44 @@ function emoji_prompt () {
 
 grml_theme_add_token emoji -f emoji_prompt '' ' '
 
+custom_vcs() {
+	CLOSE="%F{reset}"
+	BRANCH=$(jj log -r 'latest(::@ & bookmarks(), 1)' -T 'self.bookmarks()' --no-graph 2> /dev/null)
+	RES=$?
+	if [[ "$RES" -eq "0" ]]; then
+		# I can't retrieve the first element of a list which makes the next command fail in some cases
+		# CHANGE=$(jj log -r "$BRANCH::@"  --no-graph -T "'a'" | wc -c)
+		REPLY="jj-[$BRANCH]"
+		return;
+	fi
+	BRANCH=$(git branch --show-current 2> /dev/null)
+	RES=$?
+	if [[ "$RES" -eq "0" ]]; then
+		COLOR="%F{yellow}"
+		CHANGE=$(git status --untracked-files=no --porcelain 2> /dev/null)
+		if [ -z "$CHANGE" ]; then
+			COLOR="%F{green}"
+		fi
+		REPLY="git-[${COLOR}${BRANCH}${CLOSE}]"
+		return;
+	fi
+
+}
+
+grml_theme_add_token custom_vcs -f custom_vcs '' ' '
+
 # username is yellow
 zstyle ':prompt:grml:left:items:user' pre '%F{yellow}'
 zstyle ':prompt:grml:left:setup' items rc change-root user at \
                                        host path emoji percent
-zstyle ':prompt:grml:right:setup' items vcs sad-smiley
+zstyle ':prompt:grml:right:setup' items custom_vcs sad-smiley
 
 fpath+=~/.zfunc
 compinit
 
 unsetopt nomatch
+
+source <(COMPLETE=zsh jj)
 
 export PATH="${PATH}:${HOME}/.local/bin/"
 [ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
