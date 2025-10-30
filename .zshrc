@@ -183,20 +183,13 @@ export PATH="$PATH:$(yarn global bin)"
 export PATH="$PATH:$(gem environment gempath)"
 export PATH="$PATH:/home/irevoire/.local/share/gem/ruby/3.0.0/bin"
 export PATH="$PATH:$HOME/go/bin"
-export PATH=$PATH:$(brew --prefix)/opt/llvm/bin
-export MILLI_BENCH_DATASETS_PATH=~/datasets
-export MEILI_TEST_FULL_SNAPS=true
-export LINDERA_CACHE=$HOME/.cache/lindera
-export MEILI_NO_VERGEN=true
 
 export TERM=xterm-256color
 export EDITOR=hx
 
 export RUST_BACKTRACE=1
-# export RUSTFLAGS="-Z macro-backtrace"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-export KUBECONFIG="$HOME/saas-dev-lon-kubeconfig.yaml"
