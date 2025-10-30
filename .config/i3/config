@@ -257,5 +257,5 @@ exec --no-startup-id firefox
 # this will keep the PiP window of chromium and firefox on top of all desktop
 for_window [title="Picture-in-Picture"] sticky enable, border none
 
-exec "setxkbmap fr -variant bepo"
+exec "setxkbmap fr -variant ergol"
 exec --no-startup-id feh --randomize --bg-scale ~/.wallpaper/*
