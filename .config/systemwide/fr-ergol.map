@@ -1,0 +1,149 @@
+include "linux-with-alt-and-altgr"
+
+keymaps 0-15
+
+keycode   1 = Escape Escape
+keycode  14 = Delete  Delete
+keycode  15 = Tab Tab
+keycode  28 = Return
+keycode  29 = Control
+keycode  42 = Shift
+keycode  54 = Shift
+keycode  56 = Alt
+keycode  58 = Caps_Lock
+keycode  97 = Control
+
+# simplified letter definitions notation :
+keycode 16 = q Q
+Control keycode 16 = Control_q
+keycode 17 = c C
+Control keycode 17 = Control_c
+keycode 18 = o O
+Control keycode 18 = Control_o
+keycode 19 = p P
+Control keycode 19 = Control_p
+keycode 20 = w W
+Control keycode 20 = Control_w
+keycode 21 = j J
+Control keycode 21 = Control_j
+keycode 22 = m M
+Control keycode 22 = Control_m
+keycode 23 = d D
+Control keycode 23 = Control_d
+keycode 24 = exclam
+keycode 25 = y Y
+Control keycode 25 = Control_y
+
+# keycode 26 = 
+# keycode 27 = w
+
+Alt   keycode 16 = asciicircum
+AltGr keycode 16 = asciicircum
+Alt   keycode 17 = less
+AltGr keycode 17 = less
+Alt   keycode 18 = greater
+AltGr keycode 18 = greater
+Alt   keycode 19 = dollar
+AltGr keycode 19 = dollar
+Alt   keycode 20 = percent
+AltGr keycode 20 = percent
+Alt   keycode 21 = at
+AltGr keycode 21 = at
+Alt   keycode 22 = ampersand
+AltGr keycode 22 = ampersand
+Alt   keycode 23 = asterisk
+AltGr keycode 23 = asterisk
+Shift keycode 24 = exclam
+Alt   keycode 24 = apostrophe 
+AltGr keycode 24 = apostrophe 
+Alt   keycode 25 = grave
+AltGr keycode 25 = grave
+
+# simplified letter definitions notation :
+keycode 30 = a A
+Control keycode 30 = Control_a
+keycode 31 = s S
+Control keycode 31 = Control_s
+keycode 32 = e E
+Control keycode 32 = Control_e
+keycode 33 = n N
+Control keycode 33 = Control_n
+keycode 34 = f F
+Control keycode 34 = Control_f
+keycode 35 = l L
+Control keycode 35 = Control_l
+keycode 36 = r R
+Control keycode 36 = Control_r
+keycode 37 = t T
+Control keycode 37 = Control_t
+keycode 38 = i I
+Control keycode 38 = Control_i
+keycode 39 = u U
+Control keycode 39 = Control_u
+keycode 40 = apostrophe quotedbl
+
+# Symbols
+
+Alt   keycode 30 = bracketleft
+AltGr keycode 30 = bracketleft
+Alt   keycode 31 = parenleft
+AltGr keycode 31 = parenleft
+Alt   keycode 32 = parenright
+AltGr keycode 32 = parenright
+Alt   keycode 33 = bracketright
+AltGr keycode 33 = bracketright
+Alt   keycode 34 = equal
+AltGr keycode 34 = equal
+Alt   keycode 35 = backslash
+AltGr keycode 35 = backslash
+Alt   keycode 36 = plus
+AltGr keycode 36 = plus
+Alt   keycode 37 = minus
+AltGr keycode 37 = minus
+Alt   keycode 38 = slash
+AltGr keycode 38 = slash
+Alt   keycode 39 = quotedbl
+AltGr keycode 39 = quotedbl
+
+
+# Fourth row
+
+# simplified letter definitions notation :
+keycode 44 = z Z
+Control keycode 44 = Control_z
+keycode 45 = x X
+Control keycode 45 = Control_x
+keycode 46 = minus question
+keycode 47 = v V
+Control keycode 47 = Control_v
+keycode 48 = b B
+Control keycode 48 = Control_b
+keycode 49 = period colon
+keycode 50 = h H
+Control keycode 50 = Control_h
+keycode 51 = g G
+Control keycode 51 = Control_g
+keycode 52 = comma semicolon
+keycode 53 = k K
+Control keycode 53 = Control_k
+
+Alt   keycode 44 = asciitilde
+AltGr keycode 44 = asciitilde
+Alt   keycode 45 = braceleft
+AltGr keycode 45 = braceleft
+Alt   keycode 46 = braceright
+AltGr keycode 46 = braceright
+Alt   keycode 47 = underscore
+AltGr keycode 47 = underscore
+Alt   keycode 48 = numbersign
+AltGr keycode 48 = numbersign
+Alt   keycode 49 = bar
+AltGr keycode 49 = bar
+Alt   keycode 50 = exclam
+AltGr keycode 50 = exclam
+Alt   keycode 51 = semicolon
+AltGr keycode 51 = semicolon
+Alt   keycode 52 = colon
+AltGr keycode 52 = colon
+Alt   keycode 53 = question
+AltGr keycode 53 = question
