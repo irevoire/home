@@ -12,3 +12,22 @@ Load the config automatically by adding the following line to `/etc/vconsole.con
 ```
 KEYMAP=/usr/local/share/kbd/keymaps/fr-ergol.map
 ```
+
+## Making ergo-l work on X
+
+You can always load the keymap by running:
+```
+setxkbmap fr -variant ergol
+```
+
+To make this permanent I added the following lines to `/etc/X11/xorg.conf.d/00-keyboard.conf`
+
+```
+Section "InputClass"
+        Identifier "system-keyboard"
+        MatchIsKeyboard "on"
+        Option "XkbLayout" "fr"
+        Option "XkbModel" "pc104"
+        Option "XkbVariant" "ergol"
+EndSection
+```
