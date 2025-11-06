@@ -231,6 +231,7 @@ layout {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
+spawn-at-startup "flameshot"
 spawn-at-startup "waybar"
 spawn-at-startup "/home/irevoire/.wallpaper/swaybg.sh"
 
@@ -549,9 +550,7 @@ binds {
     // Mod+n       { switch-layout "next"; }
     // Mod+p { switch-layout "prev"; }
 
-    Print { screenshot; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    Print { spawn-sh "flameshot gui"; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
