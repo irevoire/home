@@ -291,6 +291,13 @@ window-rule {
     open-floating true
 }
 
+// Open flameshot in floating mode since we don't want to move other windows
+// while taking a screenshot
+window-rule {
+    match app-id=r#"flameshot"#
+    open-floating true
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
@@ -554,7 +561,8 @@ binds {
     // Mod+n       { switch-layout "next"; }
     // Mod+p { switch-layout "prev"; }
 
-    Print { spawn-sh "flameshot gui"; }
+    Mod+Print { spawn "flameshot" "gui"; }
+    Print { screenshot; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
