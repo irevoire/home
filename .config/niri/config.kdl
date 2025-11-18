@@ -296,6 +296,7 @@ window-rule {
 window-rule {
     match app-id=r#"flameshot"#
     open-floating true
+    open-fullscreen false
 }
 
 // Example: block out two password managers from screen capture.
@@ -561,8 +562,8 @@ binds {
     // Mod+n       { switch-layout "next"; }
     // Mod+p { switch-layout "prev"; }
 
-    Mod+Print { spawn "flameshot" "gui"; }
-    Print { screenshot; }
+    Print { spawn "flameshot" "gui"; }
+    // Print { screenshot; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
@@ -581,4 +582,8 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
+}
+
+environment {
+    QT_SCALE_FACTOR "0.869"
 }
