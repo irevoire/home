@@ -9,6 +9,7 @@ command = "clippy"
 
 [language-server]
 numbat-lsp = { command = "/Users/irevoire/numbat/target/debug/numbat-lsp" }
+numbat-spellcheck = { command = "/Users/irevoire/astral-interview-project-rust/target/release/spell-check", args = ["/usr/share/dict/words", "--lsp", "--check-opening", "#", "--propose-fix" ] }
 
 [[language]]
 name = "numbat"
@@ -17,7 +18,8 @@ roots = ["."]
 file-types = ["nbt"]
 comment-token = "#"
 indent = { tab-width = 2, unit = "  " }
-language-servers = [ "numbat-lsp" ]
+# language-servers = [ "numbat-lsp", "numbat-spellcheck" ]
+language-servers = [ "numbat-lsp", "numbat-spellcheck" ]
 # formatter = { command = "mylang-formatter" , args = ["--stdin"] }
 
 [[grammar]]
