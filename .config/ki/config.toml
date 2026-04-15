@@ -3,7 +3,12 @@ keyboard_layout = "ergol"
 
 [custom_keyboard_layouts]
 ergol = [
-  ['q', 'c', 'o', 'p', 'w', 'j', 'm', 'd', '’', 'y'],
-  ['a', 's', 'e', 'n', 'f', 'l', 'r', 't', 'i', 'u'],
-  ['z', 'x', '-', 'v', 'b', '.', 'h', 'g', ',', 'k'],
+    ['q', 'c', 'o', 'p', 'w', 'j', 'm', 'd', '’', 'y'],
+    ['a', 's', 'e', 'n', 'f', 'l', 'r', 't', 'i', 'u'],
+    ['z', 'x', '-', 'v', 'b', '.', 'h', 'g', ',', 'k'],
 ]
+
+
+[languages.rust.lsp_command]
+command = { command = "rust-analyzer", "arguments" = [] }
+environment = { "CARGO_TARGET_DIR" = "target/analyzer" }
