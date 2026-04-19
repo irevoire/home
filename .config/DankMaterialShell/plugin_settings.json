@@ -1,0 +1,38 @@
+{
+  "screenRecorder": {
+    "enabled": true
+  },
+  "emojiLauncher": {
+    "enabled": true
+  },
+  "imageConverter": {
+    "enabled": true
+  },
+  "usbManager": {
+    "enabled": true
+  },
+  "calculator": {
+    "enabled": true,
+    "trigger": "="
+  },
+  "ddcBrightness": {
+    "enabled": true
+  },
+  "gameControllerBattery": {
+    "enabled": true,
+    "settingsSessionToken": 1776598575352
+  },
+  "developerUtilities": {
+    "enabled": true,
+    "autoPaste": false
+  },
+  "timeUntil": {
+    "enabled": true
+  },
+  "volumeMixer": {
+    "enabled": true
+  },
+  "dankPomodoroTimer": {
+    "enabled": true
+  }
+}
