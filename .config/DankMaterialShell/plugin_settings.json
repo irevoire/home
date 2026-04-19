@@ -3,7 +3,8 @@
     "enabled": true
   },
   "emojiLauncher": {
-    "enabled": true
+    "enabled": true,
+    "recentEmojis": "⚙"
   },
   "imageConverter": {
     "enabled": true

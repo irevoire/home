@@ -403,9 +403,26 @@
         "focusedWindow"
       ],
       "centerWidgets": [
-        "music",
-        "clock",
-        "weather"
+        {
+          "id": "music",
+          "enabled": true
+        },
+        {
+          "id": "clock",
+          "enabled": true
+        },
+        {
+          "id": "dankPomodoroTimer",
+          "enabled": true
+        },
+        {
+          "id": "developerUtilities",
+          "enabled": true
+        },
+        {
+          "id": "weather",
+          "enabled": true
+        }
       ],
       "rightWidgets": [
         {
@@ -413,7 +430,11 @@
           "enabled": true
         },
         {
-          "id": "systemTray",
+          "id": "gameControllerBattery",
+          "enabled": true
+        },
+        {
+          "id": "volumeMixer",
           "enabled": true
         },
         {
@@ -433,11 +454,19 @@
           "enabled": true
         },
         {
-          "id": "battery",
+          "id": "controlCenterButton",
           "enabled": true
         },
         {
-          "id": "controlCenterButton",
+          "id": "usbManager",
+          "enabled": true
+        },
+        {
+          "id": "ddcBrightness",
+          "enabled": true
+        },
+        {
+          "id": "systemTray",
           "enabled": true
         }
       ],
@@ -554,7 +583,11 @@
   "desktopWidgetGridSettings": {},
   "desktopWidgetInstances": [],
   "desktopWidgetGroups": [],
-  "builtInPluginSettings": {},
+  "builtInPluginSettings": {
+    "dms_settings_search": {
+      "trigger": "?"
+    }
+  },
   "clipboardEnterToPaste": false,
   "launcherPluginVisibility": {},
   "launcherPluginOrder": [],
