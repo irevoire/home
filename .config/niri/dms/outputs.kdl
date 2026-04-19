@@ -1,0 +1,5 @@
+output "Philips Consumer Electronics Company PHL 499P9 0x00002868" {
+    mode "5120x1440@69.973"
+    scale 1.15
+}
+

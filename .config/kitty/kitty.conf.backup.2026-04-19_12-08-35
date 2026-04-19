@@ -17,16 +17,3 @@ background_tint 0.95
 background_tint_gaps 1.0
 
 # macos_option_as_alt left
-hide_window_decorations yes
-
-# Scrollback
-scrollback_lines 3000
-
-# Terminal features
-copy_on_select yes
-strip_trailing_spaces smart
-
-# Tab configuration
-tab_bar_style powerline
-tab_bar_align left
-tab_powerline_style     slanted
