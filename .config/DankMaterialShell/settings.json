@@ -13,7 +13,7 @@
   "controlCenterTileColorMode": "primary",
   "buttonColorMode": "primary",
   "cornerRadius": 12,
-  "niriLayoutGapsOverride": -1,
+  "niriLayoutGapsOverride": 12,
   "niriLayoutRadiusOverride": -1,
   "niriLayoutBorderSize": -1,
   "hyprlandLayoutGapsOverride": -1,
@@ -199,8 +199,8 @@
     "theme": "System Default",
     "size": 24,
     "niri": {
-      "hideWhenTyping": false,
-      "hideAfterInactiveMs": 0
+      "hideWhenTyping": true,
+      "hideAfterInactiveMs": 2017
     },
     "hyprland": {
       "hideOnKeyPress": false,
@@ -344,11 +344,11 @@
   "notificationHistorySaveNormal": true,
   "notificationHistorySaveCritical": true,
   "notificationRules": [],
-  "osdAlwaysShowValue": false,
-  "osdPosition": 5,
+  "osdAlwaysShowValue": true,
+  "osdPosition": 4,
   "osdVolumeEnabled": true,
   "osdMediaVolumeEnabled": true,
-  "osdMediaPlaybackEnabled": false,
+  "osdMediaPlaybackEnabled": true,
   "osdBrightnessEnabled": true,
   "osdIdleInhibitorEnabled": true,
   "osdMicMuteEnabled": true,
@@ -581,7 +581,79 @@
   "systemMonitorVariants": [],
   "desktopWidgetPositions": {},
   "desktopWidgetGridSettings": {},
-  "desktopWidgetInstances": [],
+  "desktopWidgetInstances": [
+    {
+      "id": "dw_1776600647386_hk3pdh1xa",
+      "widgetType": "cavaVisualizer",
+      "name": "Cava Visualizer",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ],
+        "vizMode": "bars",
+        "barCount": 92,
+        "barWidth": 10,
+        "orientation": "right",
+        "sensitivity": 160,
+        "channels": "stereo",
+        "colorChoice": "primary",
+        "bgOpacity": 0,
+        "opacity": 67,
+        "clickThrough": true,
+        "syncPositionAcrossScreens": true,
+        "showOnOverview": true,
+        "showOnOverlay": false
+      },
+      "positions": {
+        "DP-2": {
+          "width": 738.53515625,
+          "height": 1252,
+          "x": 3713.46484375,
+          "y": 0
+        },
+        "_synced": {
+          "x": 0.83411160012354,
+          "y": 0,
+          "width": 738.53515625,
+          "height": 1252
+        }
+      }
+    },
+    {
+      "id": "dw_1776600866759_uuluzqo47",
+      "widgetType": "dankDesktopWeather",
+      "name": "Dank Desktop Weather",
+      "enabled": true,
+      "config": {
+        "displayPreferences": [
+          "all"
+        ],
+        "viewMode": "forecast",
+        "showLocation": false,
+        "showCondition": true,
+        "showFeelsLike": true,
+        "showHumidity": true,
+        "showWind": true,
+        "showPressure": false,
+        "showPrecipitation": true,
+        "forecastDays": 5,
+        "showHourlyForecast": true,
+        "hourlyCount": 9,
+        "backgroundOpacity": 0,
+        "clickThrough": true,
+        "showOnOverview": true
+      },
+      "positions": {
+        "DP-2": {
+          "width": 652.234375,
+          "height": 424.9453125,
+          "x": 3424.65625,
+          "y": 827.0546875
+        }
+      }
+    }
+  ],
   "desktopWidgetGroups": [],
   "builtInPluginSettings": {
     "dms_settings_search": {
