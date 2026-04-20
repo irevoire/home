@@ -128,4 +128,7 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+Tab repeat=false { toggle-overview; }
+    Mod+S { set-dynamic-cast-window; }
+    Mod+Shift+S { set-dynamic-cast-monitor; }
+    Mod+Ctrl+S { clear-dynamic-cast-target; }
 }

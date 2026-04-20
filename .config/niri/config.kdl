@@ -83,6 +83,7 @@ input {
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
     // focus-follows-mouse max-scroll-amount="0%"
 }
+
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
 // The built-in laptop monitor is usually called "eDP-1".
@@ -146,15 +147,25 @@ layout {
     struts {
     }
 }
+
+layer-rule {
+    match namespace="^dms:clipboard$"
+    match namespace="^dms:notification-popup$"
+    
+    block-out-from "screencast"
+}
+
 layer-rule {
     match namespace="^quickshell$"
     place-within-backdrop true
 }
+
 overview {
     workspace-shadow {
         off
     }
 }
+
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
@@ -163,11 +174,15 @@ overview {
 environment {
   XDG_CURRENT_DESKTOP "niri"
 }
+
 hotkey-overlay {
     skip-at-startup
 }
+
 prefer-no-csd
+
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
 animations {
     workspace-switch {
         spring damping-ratio=0.80 stiffness=523 epsilon=0.0001
@@ -284,11 +299,13 @@ window-rule {
     match app-id=r#"^xdg-desktop-portal$"#
     open-floating true
 }
+
 window-rule {
     match app-id=r#"^steam$"# title=r#"^notificationtoasts_\d+_desktop$"#
     default-floating-position x=10 y=10 relative-to="bottom-right"
     open-focused false
 }
+
 window-rule {
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
     match app-id="Alacritty"
@@ -297,17 +314,20 @@ window-rule {
     match app-id="kitty"
     draw-border-with-background false
 }
+
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     match app-id="zoom"
     open-floating true
 }
+
 // Open dms windows as floating by default
 window-rule {
     match app-id=r#"org.quickshell$"#
     match app-id=r#"com.danklinux.dms$"#
     open-floating true
 }
+
 debug {
     honor-xdg-activation-with-invalid-serial
 }
