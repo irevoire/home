@@ -595,7 +595,7 @@
         "barCount": 92,
         "barWidth": 10,
         "orientation": "right",
-        "sensitivity": 160,
+        "sensitivity": 99,
         "channels": "stereo",
         "colorChoice": "primary",
         "bgOpacity": 0,
@@ -613,9 +613,9 @@
           "y": 0
         },
         "_synced": {
-          "x": 0.83411160012354,
+          "x": 0.7973953068845463,
           "y": 0,
-          "width": 738.53515625,
+          "width": 901.99609375,
           "height": 1252
         }
       }
