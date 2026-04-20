@@ -1,4 +1,4 @@
-theme = "Monokai"
+theme = "Monokai no background"
 keyboard_layout = "ergol"
 
 [custom_keyboard_layouts]
