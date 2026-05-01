@@ -7,11 +7,11 @@
         gaps 8
 
         border {
-        width 2
+        width 4
         }
 
         focus-ring {
-        width 2
+        width 4
         }
         }
         window-rule {
