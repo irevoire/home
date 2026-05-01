@@ -185,7 +185,7 @@ export PATH="$PATH:/home/irevoire/.local/share/gem/ruby/3.0.0/bin"
 export PATH="$PATH:$HOME/go/bin"
 
 export TERM=xterm-256color
-export EDITOR=hx
+export EDITOR=ki
 
 export RUST_BACKTRACE=1
 
