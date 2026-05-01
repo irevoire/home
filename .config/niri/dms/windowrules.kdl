@@ -4,24 +4,11 @@
 // @id=wr_1776711066002271289 @name=Display casted window
 window-rule {
     match is-window-cast-target=true
-
-    focus-ring {
-        active-color "#f38ba8"
-        inactive-color "#7d0d2d"
-    }
-
-    border {
-        inactive-color "#7d0d2d"
-    }
-
-    shadow {
-    	on
-        color "#7d0d2d"
-    }
-
-    tab-indicator {
-        active-color "#f38ba8"
-        inactive-color "#7d0d2d"
-    }
+    focus-ring { active-color "#f38ba8"; }
 }
 
+// @id=wr_1777627288481001004 @name=one.alynx.showmethekey
+window-rule {
+    match app-id="^one.alynx.showmethekey$"
+    open-floating true
+}
