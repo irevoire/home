@@ -122,6 +122,7 @@ binds {
     Ctrl+Print { screenshot-screen; }
     Ctrl+XF86Launch1 { screenshot-screen; }
     Print { screenshot; }
+    Shift+Print { spawn-sh "wl-paste | satty --filename -"; }
     XF86Launch1 { screenshot; }
     Mod+Shift+E { quit; }
     Mod+Return hotkey-overlay-title="Open Terminal" { spawn "kitty"; }

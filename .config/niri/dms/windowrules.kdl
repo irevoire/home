@@ -12,3 +12,9 @@ window-rule {
     match app-id="^one.alynx.showmethekey$"
     open-floating true
 }
+
+// @id=wr_1777629083371398992 @name=com.gabm.satty
+window-rule {
+    match app-id="^com.gabm.satty$"
+    open-floating true
+}
