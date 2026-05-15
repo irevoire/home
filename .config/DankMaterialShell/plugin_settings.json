@@ -14,7 +14,11 @@
   },
   "calculator": {
     "enabled": true,
-    "trigger": "="
+    "trigger": "=",
+    "noTrigger": false,
+    "calcEngine": "numbat",
+    "qalcCommand": "qalc -i -t -set \"decimal comma off\" -c 0",
+    "numbat": "numbat -i"
   },
   "ddcBrightness": {
     "enabled": true
@@ -35,5 +39,8 @@
   },
   "dankPomodoroTimer": {
     "enabled": true
+  },
+  "numbat calculator": {
+    "enabled": false
   }
 }

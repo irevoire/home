@@ -43,8 +43,6 @@ Xft.rgba: rgb
 Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
-Xcursor.theme: Chameleon-Pearl-Regular-0.5
-Xcursor.size:  0
 
 !XTerm*background: #272827
 !XTerm*foreground: #fdf6e3
@@ -67,3 +65,5 @@ URxvt*background:                     black
 URxvt*saveLines:                      5000
 URxvt*internalBorder:		      8
 URxvt*letterSpace:		      1
+Xcursor.theme: Adwaita
+Xcursor.size: 24
