@@ -30,3 +30,9 @@ window-rule {
     match app-id="^blueberry.py$"
     open-floating true
 }
+
+// @id=wr_1778960925279050819 @name=zenity
+window-rule {
+    match app-id="^zenity$"
+    open-floating true
+}
