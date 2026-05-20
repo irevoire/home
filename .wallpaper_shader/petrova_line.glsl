@@ -150,7 +150,7 @@ vec2 sdf(vec3 p) {
   int mat = -1;
   float d = MAX_DIST;
   float sunRad = 25.0;
-  vec3 sunPos = vec3(-40, -13, 10);
+  vec3 sunPos = vec3(40, -13, 10);
 
   float planetRad = .5;
   vec3 planetPos = vec3(0, 0, 0);
