@@ -132,4 +132,5 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+Tab repeat=false { toggle-overview; }
+    Mod+Z { spawn "hyprpicker" "-a" "-r" "-u" "200" "--scale" "2" "-d" ""; }
 }
