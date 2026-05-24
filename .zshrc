@@ -132,6 +132,7 @@ unsetopt nomatch
 
 source <(COMPLETE=zsh jj)
 source <(tree-sitter complete --shell zsh)
+source <(niri completions zsh)
 
 export PATH="${PATH}:${HOME}/.local/bin/"
 [ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
