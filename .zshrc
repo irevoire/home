@@ -130,10 +130,10 @@ compinit
 
 unsetopt nomatch
 
-source <(COMPLETE=zsh jj)
-source <(tree-sitter complete --shell zsh)
-source <(niri completions zsh)
-source <(espup completions zsh)
+command -v jj 2>&1 > /dev/null && source <(COMPLETE=zsh jj)
+command -v tree-sitter 2>&1 > /dev/null && source <(tree-sitter complete --shell zsh)
+command -v niri 2>&1 > /dev/null && source <(niri completions zsh)
+command -v espup 2>&1 > /dev/null && source <(espup completions zsh)
 
 export PATH="${PATH}:${HOME}/.local/bin/"
 [ -f $HOME/.cargo/env ] && source $HOME/.cargo/env
@@ -182,8 +182,8 @@ function hxupdate () {
 alias isvg="rsvg-convert | icat" 
 alias idot="dot -T png -Gbgcolor="none" -Ncolor="lightgray" -Nfontcolor="lightgray" -Ecolor="lightgray" | icat" 
 
-export PATH="$PATH:$(yarn global bin)"
-export PATH="$PATH:$(gem environment gempath)"
+command -v yarn 2>&1 > /dev/null && export PATH="$PATH:$(yarn global bin)"
+command -v gem 2>&1 > /dev/null && export PATH="$PATH:$(gem environment gempath)"
 export PATH="$PATH:/home/irevoire/.local/share/gem/ruby/3.0.0/bin"
 export PATH="$PATH:$HOME/go/bin"
 
@@ -197,6 +197,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/home/irevoire/export-esp.sh" ] && \. "/home/irevoire/export-esp.sh"  # This setups espup for the espressif ecosystem (esp32)
+[ -s "$HOME/.local/bin/env" ] && \. "$HOME/.local/bin/env"
 
 # pnpm
 export PNPM_HOME="/Users/irevoire/Library/pnpm"
@@ -206,4 +207,4 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-. "$HOME/.local/bin/env"
+
