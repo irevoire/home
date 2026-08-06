@@ -163,7 +163,7 @@ function icat() {
 function check_recipes() {
 	old_path="$(pwd)"
 
-	packages=(shfmt genfstab iw iwd)
+	packages=(shfmt genfstab iw iwd satty)
 
 	for package in ${packages[@]}; do
 		package_path=~/repos/aerynos/recipes/$(echo $package | cut -c1-1)/$package
